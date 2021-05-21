@@ -1,0 +1,1025 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "line": 7,
+        "name": "Cliente quer verificar disponibilidade de um produto",
+        "description": "",
+        "id": "venda-de-produtos-para-loja;cliente-quer-verificar-disponibilidade-de-um-produto",
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Que cliente VISITA a pagina do site",
+            "match": {},
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9,
+            "name": "O cliente pesquisa por um produto XXXXX",
+            "match": {},
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 10,
+            "name": "Deve ser consultado o estoque do produto XXXX",
+            "match": {},
+            "keyword": "Entao "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 11,
+            "name": "Retornar a quantidade de Produtos Disponiveis em estoque de cada loja",
+            "match": {},
+            "keyword": "E "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@venda"
+          },
+          {
+            "name": "@verificar_disponibilidade_produto"
+          }
+        ]
+      },
+      {
+        "line": 14,
+        "name": "Cliente seleciona um produto e adiciona ao Carrinho de compras",
+        "description": "",
+        "id": "venda-de-produtos-para-loja;cliente-seleciona-um-produto-e-adiciona-ao-carrinho-de-compras",
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "Que cliente FEZ LOGIN na pagina do site",
+            "match": {},
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "O cliente adiciona um produto ao carrinho de compras",
+            "match": {},
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 17,
+            "name": "O produto fica reservado por 15 minutos",
+            "match": {},
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@venda"
+          },
+          {
+            "name": "@seleciona_produto_comprar"
+          }
+        ]
+      },
+      {
+        "line": 20,
+        "name": "Cliente finaliza a compra do seu Carrinho de compras",
+        "description": "",
+        "id": "venda-de-produtos-para-loja;cliente-finaliza-a-compra-do-seu-carrinho-de-compras",
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 21,
+            "name": "Que cliente FEZ LOGIN na pagina do site",
+            "match": {},
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 22,
+            "name": "Cliente tem itens no seu Carrinho de Compras",
+            "match": {},
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 23,
+            "name": "O cliente finaliza a compra",
+            "match": {},
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 24,
+            "name": "Emite as opcoes de pagamento",
+            "match": {},
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@venda"
+          },
+          {
+            "name": "@finaliza_compra_produto"
+          }
+        ]
+      },
+      {
+        "line": 34,
+        "name": "Cliente efetua o pagamento",
+        "description": "",
+        "id": "venda-de-produtos-para-loja;cliente-efetua-o-pagamento;;2",
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.springframework.web.client.ResourceAccessException: I/O error on GET request for \"http://localhost:8080/\": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)\n\tat org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:744)\n\tat org.springframework.web.client.RestTemplate.execute(RestTemplate.java:670)\n\tat org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:311)\n\tat bddgof.Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras(Stepdefs.java:27)\n\tat ✽.Que cliente finalizou a compra do seu Carrinho de Compras(classpath:bddgof/venda.feature:28)\nCaused by: java.net.ConnectException: Connection refused (Connection refused)\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)\n\tat java.net.Socket.connect(Socket.java:607)\n\tat java.net.Socket.connect(Socket.java:556)\n\tat sun.net.NetworkClient.doConnect(NetworkClient.java:180)\n\tat sun.net.www.http.HttpClient.openServer(HttpClient.java:463)\n\tat sun.net.www.http.HttpClient.openServer(HttpClient.java:558)\n\tat sun.net.www.http.HttpClient.\u003cinit\u003e(HttpClient.java:242)\n\tat sun.net.www.http.HttpClient.New(HttpClient.java:339)\n\tat sun.net.www.http.HttpClient.New(HttpClient.java:357)\n\tat sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)\n\tat sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)\n\tat sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)\n\tat sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)\n\tat org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)\n\tat org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)\n\tat org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)\n\tat org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:735)\n\tat org.springframework.web.client.RestTemplate.execute(RestTemplate.java:670)\n\tat org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:311)\n\tat bddgof.Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras(Stepdefs.java:27)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:57)\n\tat cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\n\tat cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)\n\tat cucumber.runner.TestCase.run(TestCase.java:45)\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:122)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:64)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:131)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)\n\tat org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)\n\tat org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)\n",
+              "duration": 422529521,
+              "status": "failed"
+            },
+            "line": 28,
+            "name": "Que cliente finalizou a compra do seu Carrinho de Compras",
+            "match": {
+              "location": "Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 11930,
+              "status": "skipped"
+            },
+            "line": 29,
+            "name": "Escolhe a opcao de pagamento: \"CARTAO\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CARTAO\"",
+                  "offset": 30
+                }
+              ],
+              "location": "Stepdefs.escolhe_a_opcao_de_pagamento(String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 9937,
+              "status": "skipped"
+            },
+            "line": 30,
+            "name": "clica em finalizar Pagamento: 50",
+            "match": {
+              "arguments": [
+                {
+                  "val": "50",
+                  "offset": 30
+                }
+              ],
+              "location": "Stepdefs.clica_em_finalizar_Pagamento(Integer)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 7142,
+              "status": "skipped"
+            },
+            "line": 31,
+            "name": "O pagamento tem que ser concluido com sucesso: \"Pagamento em Cartão processado com sucesso\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Pagamento em Cartão processado com sucesso\"",
+                  "offset": 47
+                }
+              ],
+              "location": "Stepdefs.o_pagamento_tem_que_ser_concluido_com_sucesso(String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@venda"
+          },
+          {
+            "name": "@finaliza_pagamento"
+          }
+        ]
+      },
+      {
+        "line": 35,
+        "name": "Cliente efetua o pagamento",
+        "description": "",
+        "id": "venda-de-produtos-para-loja;cliente-efetua-o-pagamento;;3",
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.springframework.web.client.ResourceAccessException: I/O error on GET request for \"http://localhost:8080/\": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)\n\tat org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:744)\n\tat org.springframework.web.client.RestTemplate.execute(RestTemplate.java:670)\n\tat org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:311)\n\tat bddgof.Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras(Stepdefs.java:27)\n\tat ✽.Que cliente finalizou a compra do seu Carrinho de Compras(classpath:bddgof/venda.feature:28)\nCaused by: java.net.ConnectException: Connection refused (Connection refused)\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)\n\tat java.net.Socket.connect(Socket.java:607)\n\tat java.net.Socket.connect(Socket.java:556)\n\tat sun.net.NetworkClient.doConnect(NetworkClient.java:180)\n\tat sun.net.www.http.HttpClient.openServer(HttpClient.java:463)\n\tat sun.net.www.http.HttpClient.openServer(HttpClient.java:558)\n\tat sun.net.www.http.HttpClient.\u003cinit\u003e(HttpClient.java:242)\n\tat sun.net.www.http.HttpClient.New(HttpClient.java:339)\n\tat sun.net.www.http.HttpClient.New(HttpClient.java:357)\n\tat sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)\n\tat sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)\n\tat sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)\n\tat sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)\n\tat org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)\n\tat org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)\n\tat org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)\n\tat org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:735)\n\tat org.springframework.web.client.RestTemplate.execute(RestTemplate.java:670)\n\tat org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:311)\n\tat bddgof.Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras(Stepdefs.java:27)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:57)\n\tat cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\n\tat cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)\n\tat cucumber.runner.TestCase.run(TestCase.java:45)\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:122)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:64)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:131)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)\n\tat org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)\n\tat org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)\n",
+              "duration": 4660468,
+              "status": "failed"
+            },
+            "line": 28,
+            "name": "Que cliente finalizou a compra do seu Carrinho de Compras",
+            "match": {
+              "location": "Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 9764,
+              "status": "skipped"
+            },
+            "line": 29,
+            "name": "Escolhe a opcao de pagamento: \"CARTAO\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CARTAO\"",
+                  "offset": 30
+                }
+              ],
+              "location": "Stepdefs.escolhe_a_opcao_de_pagamento(String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 6389,
+              "status": "skipped"
+            },
+            "line": 30,
+            "name": "clica em finalizar Pagamento: 1000",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1000",
+                  "offset": 30
+                }
+              ],
+              "location": "Stepdefs.clica_em_finalizar_Pagamento(Integer)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 6329,
+              "status": "skipped"
+            },
+            "line": 31,
+            "name": "O pagamento tem que ser concluido com sucesso: \"Pagamento em Cartão processado com sucesso\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Pagamento em Cartão processado com sucesso\"",
+                  "offset": 47
+                }
+              ],
+              "location": "Stepdefs.o_pagamento_tem_que_ser_concluido_com_sucesso(String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@venda"
+          },
+          {
+            "name": "@finaliza_pagamento"
+          }
+        ]
+      },
+      {
+        "line": 36,
+        "name": "Cliente efetua o pagamento",
+        "description": "",
+        "id": "venda-de-produtos-para-loja;cliente-efetua-o-pagamento;;4",
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.springframework.web.client.ResourceAccessException: I/O error on GET request for \"http://localhost:8080/\": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)\n\tat org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:744)\n\tat org.springframework.web.client.RestTemplate.execute(RestTemplate.java:670)\n\tat org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:311)\n\tat bddgof.Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras(Stepdefs.java:27)\n\tat ✽.Que cliente finalizou a compra do seu Carrinho de Compras(classpath:bddgof/venda.feature:28)\nCaused by: java.net.ConnectException: Connection refused (Connection refused)\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)\n\tat java.net.Socket.connect(Socket.java:607)\n\tat java.net.Socket.connect(Socket.java:556)\n\tat sun.net.NetworkClient.doConnect(NetworkClient.java:180)\n\tat sun.net.www.http.HttpClient.openServer(HttpClient.java:463)\n\tat sun.net.www.http.HttpClient.openServer(HttpClient.java:558)\n\tat sun.net.www.http.HttpClient.\u003cinit\u003e(HttpClient.java:242)\n\tat sun.net.www.http.HttpClient.New(HttpClient.java:339)\n\tat sun.net.www.http.HttpClient.New(HttpClient.java:357)\n\tat sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)\n\tat sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)\n\tat sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)\n\tat sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)\n\tat org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)\n\tat org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)\n\tat org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)\n\tat org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:735)\n\tat org.springframework.web.client.RestTemplate.execute(RestTemplate.java:670)\n\tat org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:311)\n\tat bddgof.Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras(Stepdefs.java:27)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:57)\n\tat cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\n\tat cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)\n\tat cucumber.runner.TestCase.run(TestCase.java:45)\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:122)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:64)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:131)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)\n\tat org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)\n\tat org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)\n",
+              "duration": 4573437,
+              "status": "failed"
+            },
+            "line": 28,
+            "name": "Que cliente finalizou a compra do seu Carrinho de Compras",
+            "match": {
+              "location": "Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 12186,
+              "status": "skipped"
+            },
+            "line": 29,
+            "name": "Escolhe a opcao de pagamento: \"CARTAO\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CARTAO\"",
+                  "offset": 30
+                }
+              ],
+              "location": "Stepdefs.escolhe_a_opcao_de_pagamento(String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 6862,
+              "status": "skipped"
+            },
+            "line": 30,
+            "name": "clica em finalizar Pagamento: 1001",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1001",
+                  "offset": 30
+                }
+              ],
+              "location": "Stepdefs.clica_em_finalizar_Pagamento(Integer)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 6605,
+              "status": "skipped"
+            },
+            "line": 31,
+            "name": "O pagamento tem que ser concluido com sucesso: \"Pagamento não autorizado\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Pagamento não autorizado\"",
+                  "offset": 47
+                }
+              ],
+              "location": "Stepdefs.o_pagamento_tem_que_ser_concluido_com_sucesso(String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@venda"
+          },
+          {
+            "name": "@finaliza_pagamento"
+          }
+        ]
+      },
+      {
+        "line": 37,
+        "name": "Cliente efetua o pagamento",
+        "description": "",
+        "id": "venda-de-produtos-para-loja;cliente-efetua-o-pagamento;;5",
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.springframework.web.client.ResourceAccessException: I/O error on GET request for \"http://localhost:8080/\": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)\n\tat org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:744)\n\tat org.springframework.web.client.RestTemplate.execute(RestTemplate.java:670)\n\tat org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:311)\n\tat bddgof.Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras(Stepdefs.java:27)\n\tat ✽.Que cliente finalizou a compra do seu Carrinho de Compras(classpath:bddgof/venda.feature:28)\nCaused by: java.net.ConnectException: Connection refused (Connection refused)\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)\n\tat java.net.Socket.connect(Socket.java:607)\n\tat java.net.Socket.connect(Socket.java:556)\n\tat sun.net.NetworkClient.doConnect(NetworkClient.java:180)\n\tat sun.net.www.http.HttpClient.openServer(HttpClient.java:463)\n\tat sun.net.www.http.HttpClient.openServer(HttpClient.java:558)\n\tat sun.net.www.http.HttpClient.\u003cinit\u003e(HttpClient.java:242)\n\tat sun.net.www.http.HttpClient.New(HttpClient.java:339)\n\tat sun.net.www.http.HttpClient.New(HttpClient.java:357)\n\tat sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)\n\tat sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)\n\tat sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)\n\tat sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)\n\tat org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)\n\tat org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)\n\tat org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)\n\tat org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:735)\n\tat org.springframework.web.client.RestTemplate.execute(RestTemplate.java:670)\n\tat org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:311)\n\tat bddgof.Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras(Stepdefs.java:27)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:57)\n\tat cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\n\tat cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)\n\tat cucumber.runner.TestCase.run(TestCase.java:45)\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:122)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:64)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:131)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)\n\tat org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)\n\tat org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)\n",
+              "duration": 7237779,
+              "status": "failed"
+            },
+            "line": 28,
+            "name": "Que cliente finalizou a compra do seu Carrinho de Compras",
+            "match": {
+              "location": "Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 10313,
+              "status": "skipped"
+            },
+            "line": 29,
+            "name": "Escolhe a opcao de pagamento: \"CHEQUE\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CHEQUE\"",
+                  "offset": 30
+                }
+              ],
+              "location": "Stepdefs.escolhe_a_opcao_de_pagamento(String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 7617,
+              "status": "skipped"
+            },
+            "line": 30,
+            "name": "clica em finalizar Pagamento: 50",
+            "match": {
+              "arguments": [
+                {
+                  "val": "50",
+                  "offset": 30
+                }
+              ],
+              "location": "Stepdefs.clica_em_finalizar_Pagamento(Integer)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 6861,
+              "status": "skipped"
+            },
+            "line": 31,
+            "name": "O pagamento tem que ser concluido com sucesso: \"Pagamento em Cheque processado com sucesso\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Pagamento em Cheque processado com sucesso\"",
+                  "offset": 47
+                }
+              ],
+              "location": "Stepdefs.o_pagamento_tem_que_ser_concluido_com_sucesso(String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@venda"
+          },
+          {
+            "name": "@finaliza_pagamento"
+          }
+        ]
+      },
+      {
+        "line": 38,
+        "name": "Cliente efetua o pagamento",
+        "description": "",
+        "id": "venda-de-produtos-para-loja;cliente-efetua-o-pagamento;;6",
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.springframework.web.client.ResourceAccessException: I/O error on GET request for \"http://localhost:8080/\": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)\n\tat org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:744)\n\tat org.springframework.web.client.RestTemplate.execute(RestTemplate.java:670)\n\tat org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:311)\n\tat bddgof.Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras(Stepdefs.java:27)\n\tat ✽.Que cliente finalizou a compra do seu Carrinho de Compras(classpath:bddgof/venda.feature:28)\nCaused by: java.net.ConnectException: Connection refused (Connection refused)\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)\n\tat java.net.Socket.connect(Socket.java:607)\n\tat java.net.Socket.connect(Socket.java:556)\n\tat sun.net.NetworkClient.doConnect(NetworkClient.java:180)\n\tat sun.net.www.http.HttpClient.openServer(HttpClient.java:463)\n\tat sun.net.www.http.HttpClient.openServer(HttpClient.java:558)\n\tat sun.net.www.http.HttpClient.\u003cinit\u003e(HttpClient.java:242)\n\tat sun.net.www.http.HttpClient.New(HttpClient.java:339)\n\tat sun.net.www.http.HttpClient.New(HttpClient.java:357)\n\tat sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)\n\tat sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)\n\tat sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)\n\tat sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)\n\tat org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)\n\tat org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)\n\tat org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)\n\tat org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:735)\n\tat org.springframework.web.client.RestTemplate.execute(RestTemplate.java:670)\n\tat org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:311)\n\tat bddgof.Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras(Stepdefs.java:27)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:57)\n\tat cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\n\tat cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)\n\tat cucumber.runner.TestCase.run(TestCase.java:45)\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:122)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:64)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:131)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)\n\tat org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)\n\tat org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)\n",
+              "duration": 4684572,
+              "status": "failed"
+            },
+            "line": 28,
+            "name": "Que cliente finalizou a compra do seu Carrinho de Compras",
+            "match": {
+              "location": "Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 10720,
+              "status": "skipped"
+            },
+            "line": 29,
+            "name": "Escolhe a opcao de pagamento: \"CHEQUE\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CHEQUE\"",
+                  "offset": 30
+                }
+              ],
+              "location": "Stepdefs.escolhe_a_opcao_de_pagamento(String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 8471,
+              "status": "skipped"
+            },
+            "line": 30,
+            "name": "clica em finalizar Pagamento: 500",
+            "match": {
+              "arguments": [
+                {
+                  "val": "500",
+                  "offset": 30
+                }
+              ],
+              "location": "Stepdefs.clica_em_finalizar_Pagamento(Integer)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 6484,
+              "status": "skipped"
+            },
+            "line": 31,
+            "name": "O pagamento tem que ser concluido com sucesso: \"Pagamento não autorizado\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Pagamento não autorizado\"",
+                  "offset": 47
+                }
+              ],
+              "location": "Stepdefs.o_pagamento_tem_que_ser_concluido_com_sucesso(String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@venda"
+          },
+          {
+            "name": "@finaliza_pagamento"
+          }
+        ]
+      },
+      {
+        "line": 39,
+        "name": "Cliente efetua o pagamento",
+        "description": "",
+        "id": "venda-de-produtos-para-loja;cliente-efetua-o-pagamento;;7",
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.springframework.web.client.ResourceAccessException: I/O error on GET request for \"http://localhost:8080/\": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)\n\tat org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:744)\n\tat org.springframework.web.client.RestTemplate.execute(RestTemplate.java:670)\n\tat org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:311)\n\tat bddgof.Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras(Stepdefs.java:27)\n\tat ✽.Que cliente finalizou a compra do seu Carrinho de Compras(classpath:bddgof/venda.feature:28)\nCaused by: java.net.ConnectException: Connection refused (Connection refused)\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)\n\tat java.net.Socket.connect(Socket.java:607)\n\tat java.net.Socket.connect(Socket.java:556)\n\tat sun.net.NetworkClient.doConnect(NetworkClient.java:180)\n\tat sun.net.www.http.HttpClient.openServer(HttpClient.java:463)\n\tat sun.net.www.http.HttpClient.openServer(HttpClient.java:558)\n\tat sun.net.www.http.HttpClient.\u003cinit\u003e(HttpClient.java:242)\n\tat sun.net.www.http.HttpClient.New(HttpClient.java:339)\n\tat sun.net.www.http.HttpClient.New(HttpClient.java:357)\n\tat sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)\n\tat sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)\n\tat sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)\n\tat sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)\n\tat org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)\n\tat org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)\n\tat org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)\n\tat org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:735)\n\tat org.springframework.web.client.RestTemplate.execute(RestTemplate.java:670)\n\tat org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:311)\n\tat bddgof.Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras(Stepdefs.java:27)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:57)\n\tat cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\n\tat cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)\n\tat cucumber.runner.TestCase.run(TestCase.java:45)\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:122)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:64)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:131)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)\n\tat org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)\n\tat org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)\n",
+              "duration": 4422566,
+              "status": "failed"
+            },
+            "line": 28,
+            "name": "Que cliente finalizou a compra do seu Carrinho de Compras",
+            "match": {
+              "location": "Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 9856,
+              "status": "skipped"
+            },
+            "line": 29,
+            "name": "Escolhe a opcao de pagamento: \"CHEQUE\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CHEQUE\"",
+                  "offset": 30
+                }
+              ],
+              "location": "Stepdefs.escolhe_a_opcao_de_pagamento(String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 6521,
+              "status": "skipped"
+            },
+            "line": 30,
+            "name": "clica em finalizar Pagamento: 5000",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5000",
+                  "offset": 30
+                }
+              ],
+              "location": "Stepdefs.clica_em_finalizar_Pagamento(Integer)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 6343,
+              "status": "skipped"
+            },
+            "line": 31,
+            "name": "O pagamento tem que ser concluido com sucesso: \"Pagamento não autorizado\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Pagamento não autorizado\"",
+                  "offset": 47
+                }
+              ],
+              "location": "Stepdefs.o_pagamento_tem_que_ser_concluido_com_sucesso(String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@venda"
+          },
+          {
+            "name": "@finaliza_pagamento"
+          }
+        ]
+      },
+      {
+        "line": 40,
+        "name": "Cliente efetua o pagamento",
+        "description": "",
+        "id": "venda-de-produtos-para-loja;cliente-efetua-o-pagamento;;8",
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.springframework.web.client.ResourceAccessException: I/O error on GET request for \"http://localhost:8080/\": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)\n\tat org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:744)\n\tat org.springframework.web.client.RestTemplate.execute(RestTemplate.java:670)\n\tat org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:311)\n\tat bddgof.Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras(Stepdefs.java:27)\n\tat ✽.Que cliente finalizou a compra do seu Carrinho de Compras(classpath:bddgof/venda.feature:28)\nCaused by: java.net.ConnectException: Connection refused (Connection refused)\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)\n\tat java.net.Socket.connect(Socket.java:607)\n\tat java.net.Socket.connect(Socket.java:556)\n\tat sun.net.NetworkClient.doConnect(NetworkClient.java:180)\n\tat sun.net.www.http.HttpClient.openServer(HttpClient.java:463)\n\tat sun.net.www.http.HttpClient.openServer(HttpClient.java:558)\n\tat sun.net.www.http.HttpClient.\u003cinit\u003e(HttpClient.java:242)\n\tat sun.net.www.http.HttpClient.New(HttpClient.java:339)\n\tat sun.net.www.http.HttpClient.New(HttpClient.java:357)\n\tat sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)\n\tat sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)\n\tat sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)\n\tat sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)\n\tat org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)\n\tat org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)\n\tat org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)\n\tat org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:735)\n\tat org.springframework.web.client.RestTemplate.execute(RestTemplate.java:670)\n\tat org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:311)\n\tat bddgof.Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras(Stepdefs.java:27)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:57)\n\tat cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\n\tat cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)\n\tat cucumber.runner.TestCase.run(TestCase.java:45)\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:122)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:64)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:131)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)\n\tat org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)\n\tat org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)\n",
+              "duration": 5614647,
+              "status": "failed"
+            },
+            "line": 28,
+            "name": "Que cliente finalizou a compra do seu Carrinho de Compras",
+            "match": {
+              "location": "Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 10623,
+              "status": "skipped"
+            },
+            "line": 29,
+            "name": "Escolhe a opcao de pagamento: \"DINHEIRO\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DINHEIRO\"",
+                  "offset": 30
+                }
+              ],
+              "location": "Stepdefs.escolhe_a_opcao_de_pagamento(String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 7092,
+              "status": "skipped"
+            },
+            "line": 30,
+            "name": "clica em finalizar Pagamento: 50",
+            "match": {
+              "arguments": [
+                {
+                  "val": "50",
+                  "offset": 30
+                }
+              ],
+              "location": "Stepdefs.clica_em_finalizar_Pagamento(Integer)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 6531,
+              "status": "skipped"
+            },
+            "line": 31,
+            "name": "O pagamento tem que ser concluido com sucesso: \"Pagamento em Dinheiro processado com sucesso\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Pagamento em Dinheiro processado com sucesso\"",
+                  "offset": 47
+                }
+              ],
+              "location": "Stepdefs.o_pagamento_tem_que_ser_concluido_com_sucesso(String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@venda"
+          },
+          {
+            "name": "@finaliza_pagamento"
+          }
+        ]
+      },
+      {
+        "line": 41,
+        "name": "Cliente efetua o pagamento",
+        "description": "",
+        "id": "venda-de-produtos-para-loja;cliente-efetua-o-pagamento;;9",
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.springframework.web.client.ResourceAccessException: I/O error on GET request for \"http://localhost:8080/\": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)\n\tat org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:744)\n\tat org.springframework.web.client.RestTemplate.execute(RestTemplate.java:670)\n\tat org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:311)\n\tat bddgof.Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras(Stepdefs.java:27)\n\tat ✽.Que cliente finalizou a compra do seu Carrinho de Compras(classpath:bddgof/venda.feature:28)\nCaused by: java.net.ConnectException: Connection refused (Connection refused)\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)\n\tat java.net.Socket.connect(Socket.java:607)\n\tat java.net.Socket.connect(Socket.java:556)\n\tat sun.net.NetworkClient.doConnect(NetworkClient.java:180)\n\tat sun.net.www.http.HttpClient.openServer(HttpClient.java:463)\n\tat sun.net.www.http.HttpClient.openServer(HttpClient.java:558)\n\tat sun.net.www.http.HttpClient.\u003cinit\u003e(HttpClient.java:242)\n\tat sun.net.www.http.HttpClient.New(HttpClient.java:339)\n\tat sun.net.www.http.HttpClient.New(HttpClient.java:357)\n\tat sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)\n\tat sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)\n\tat sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)\n\tat sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)\n\tat org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)\n\tat org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)\n\tat org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)\n\tat org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:735)\n\tat org.springframework.web.client.RestTemplate.execute(RestTemplate.java:670)\n\tat org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:311)\n\tat bddgof.Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras(Stepdefs.java:27)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:57)\n\tat cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\n\tat cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)\n\tat cucumber.runner.TestCase.run(TestCase.java:45)\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:122)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:64)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:131)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)\n\tat org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)\n\tat org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)\n",
+              "duration": 5649477,
+              "status": "failed"
+            },
+            "line": 28,
+            "name": "Que cliente finalizou a compra do seu Carrinho de Compras",
+            "match": {
+              "location": "Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 11114,
+              "status": "skipped"
+            },
+            "line": 29,
+            "name": "Escolhe a opcao de pagamento: \"DINHEIRO\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DINHEIRO\"",
+                  "offset": 30
+                }
+              ],
+              "location": "Stepdefs.escolhe_a_opcao_de_pagamento(String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 6897,
+              "status": "skipped"
+            },
+            "line": 30,
+            "name": "clica em finalizar Pagamento: 500",
+            "match": {
+              "arguments": [
+                {
+                  "val": "500",
+                  "offset": 30
+                }
+              ],
+              "location": "Stepdefs.clica_em_finalizar_Pagamento(Integer)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 6888,
+              "status": "skipped"
+            },
+            "line": 31,
+            "name": "O pagamento tem que ser concluido com sucesso: \"Pagamento em Dinheiro processado com sucesso\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Pagamento em Dinheiro processado com sucesso\"",
+                  "offset": 47
+                }
+              ],
+              "location": "Stepdefs.o_pagamento_tem_que_ser_concluido_com_sucesso(String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@venda"
+          },
+          {
+            "name": "@finaliza_pagamento"
+          }
+        ]
+      },
+      {
+        "line": 42,
+        "name": "Cliente efetua o pagamento",
+        "description": "",
+        "id": "venda-de-produtos-para-loja;cliente-efetua-o-pagamento;;10",
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.springframework.web.client.ResourceAccessException: I/O error on GET request for \"http://localhost:8080/\": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)\n\tat org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:744)\n\tat org.springframework.web.client.RestTemplate.execute(RestTemplate.java:670)\n\tat org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:311)\n\tat bddgof.Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras(Stepdefs.java:27)\n\tat ✽.Que cliente finalizou a compra do seu Carrinho de Compras(classpath:bddgof/venda.feature:28)\nCaused by: java.net.ConnectException: Connection refused (Connection refused)\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)\n\tat java.net.Socket.connect(Socket.java:607)\n\tat java.net.Socket.connect(Socket.java:556)\n\tat sun.net.NetworkClient.doConnect(NetworkClient.java:180)\n\tat sun.net.www.http.HttpClient.openServer(HttpClient.java:463)\n\tat sun.net.www.http.HttpClient.openServer(HttpClient.java:558)\n\tat sun.net.www.http.HttpClient.\u003cinit\u003e(HttpClient.java:242)\n\tat sun.net.www.http.HttpClient.New(HttpClient.java:339)\n\tat sun.net.www.http.HttpClient.New(HttpClient.java:357)\n\tat sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)\n\tat sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)\n\tat sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)\n\tat sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)\n\tat org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)\n\tat org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)\n\tat org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)\n\tat org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:735)\n\tat org.springframework.web.client.RestTemplate.execute(RestTemplate.java:670)\n\tat org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:311)\n\tat bddgof.Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras(Stepdefs.java:27)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:57)\n\tat cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\n\tat cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)\n\tat cucumber.runner.TestCase.run(TestCase.java:45)\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:122)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:64)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:131)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)\n\tat org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)\n\tat org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)\n",
+              "duration": 6758502,
+              "status": "failed"
+            },
+            "line": 28,
+            "name": "Que cliente finalizou a compra do seu Carrinho de Compras",
+            "match": {
+              "location": "Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 10202,
+              "status": "skipped"
+            },
+            "line": 29,
+            "name": "Escolhe a opcao de pagamento: \"DINHEIRO\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DINHEIRO\"",
+                  "offset": 30
+                }
+              ],
+              "location": "Stepdefs.escolhe_a_opcao_de_pagamento(String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 8056,
+              "status": "skipped"
+            },
+            "line": 30,
+            "name": "clica em finalizar Pagamento: 5000",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5000",
+                  "offset": 30
+                }
+              ],
+              "location": "Stepdefs.clica_em_finalizar_Pagamento(Integer)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 215841,
+              "status": "skipped"
+            },
+            "line": 31,
+            "name": "O pagamento tem que ser concluido com sucesso: \"Pagamento em Dinheiro processado com sucesso\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Pagamento em Dinheiro processado com sucesso\"",
+                  "offset": 47
+                }
+              ],
+              "location": "Stepdefs.o_pagamento_tem_que_ser_concluido_com_sucesso(String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@venda"
+          },
+          {
+            "name": "@finaliza_pagamento"
+          }
+        ]
+      },
+      {
+        "line": 43,
+        "name": "Cliente efetua o pagamento",
+        "description": "",
+        "id": "venda-de-produtos-para-loja;cliente-efetua-o-pagamento;;11",
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.springframework.web.client.ResourceAccessException: I/O error on GET request for \"http://localhost:8080/\": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)\n\tat org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:744)\n\tat org.springframework.web.client.RestTemplate.execute(RestTemplate.java:670)\n\tat org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:311)\n\tat bddgof.Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras(Stepdefs.java:27)\n\tat ✽.Que cliente finalizou a compra do seu Carrinho de Compras(classpath:bddgof/venda.feature:28)\nCaused by: java.net.ConnectException: Connection refused (Connection refused)\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)\n\tat java.net.Socket.connect(Socket.java:607)\n\tat java.net.Socket.connect(Socket.java:556)\n\tat sun.net.NetworkClient.doConnect(NetworkClient.java:180)\n\tat sun.net.www.http.HttpClient.openServer(HttpClient.java:463)\n\tat sun.net.www.http.HttpClient.openServer(HttpClient.java:558)\n\tat sun.net.www.http.HttpClient.\u003cinit\u003e(HttpClient.java:242)\n\tat sun.net.www.http.HttpClient.New(HttpClient.java:339)\n\tat sun.net.www.http.HttpClient.New(HttpClient.java:357)\n\tat sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)\n\tat sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)\n\tat sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)\n\tat sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)\n\tat org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)\n\tat org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)\n\tat org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)\n\tat org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:735)\n\tat org.springframework.web.client.RestTemplate.execute(RestTemplate.java:670)\n\tat org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:311)\n\tat bddgof.Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras(Stepdefs.java:27)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:57)\n\tat cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\n\tat cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)\n\tat cucumber.runner.TestCase.run(TestCase.java:45)\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:122)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:64)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:131)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)\n\tat org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)\n\tat org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)\n",
+              "duration": 4533573,
+              "status": "failed"
+            },
+            "line": 28,
+            "name": "Que cliente finalizou a compra do seu Carrinho de Compras",
+            "match": {
+              "location": "Stepdefs.que_cliente_finalizou_a_compra_do_seu_Carrinho_de_Compras()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 10353,
+              "status": "skipped"
+            },
+            "line": 29,
+            "name": "Escolhe a opcao de pagamento: \"DINHEIRO\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DINHEIRO\"",
+                  "offset": 30
+                }
+              ],
+              "location": "Stepdefs.escolhe_a_opcao_de_pagamento(String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 10120,
+              "status": "skipped"
+            },
+            "line": 30,
+            "name": "clica em finalizar Pagamento: -1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "-1",
+                  "offset": 30
+                }
+              ],
+              "location": "Stepdefs.clica_em_finalizar_Pagamento(Integer)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 6426,
+              "status": "skipped"
+            },
+            "line": 31,
+            "name": "O pagamento tem que ser concluido com sucesso: \"Pagamento em Dinheiro processado com sucesso\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Pagamento em Dinheiro processado com sucesso\"",
+                  "offset": 47
+                }
+              ],
+              "location": "Stepdefs.o_pagamento_tem_que_ser_concluido_com_sucesso(String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@venda"
+          },
+          {
+            "name": "@finaliza_pagamento"
+          }
+        ]
+      }
+    ],
+    "name": "Venda de produtos para Loja",
+    "description": "  Descrição da funcionalidade, preferencialmente atrelando a feature ao valor gerado para a organização",
+    "id": "venda-de-produtos-para-loja",
+    "keyword": "Funcionalidade",
+    "uri": "classpath:bddgof/venda.feature",
+    "tags": [
+      {
+        "name": "@venda",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

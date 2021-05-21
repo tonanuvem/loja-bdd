@@ -1,0 +1,34 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      java: openjdk8
+    commands:
+      - echo $CODEBUILD_SRC_DIR
+      - echo $CODEBUILD_SRC_DIR_testes
+  build:
+    commands:
+    # teste unitario da aplicacao
+      - cd $CODEBUILD_SRC_DIR
+      - mvn -q test && mvn -q package
+    # rodar aplicacao em background e jogando a saida no arquivo de log
+      - nohup java -jar target/padroesgof-0.0.1-SNAPSHOT.jar > logfile.log 2>&1 &
+    # testes integrados
+      - tail -f logfile.log |grep -m 1 "Started DemoPagamento" | xargs echo "" >> logfile.log \;
+      # le o arquivo de log e só continua quando a aplicação estiver no AR
+      - tail -30 logfile.log
+      - cd $CODEBUILD_SRC_DIR_testes
+      - mvn --no-transfer-progress test
+  post_build:
+    commands:
+      - ls -l $CODEBUILD_SRC_DIR_testes/target/ | grep json
+reports:
+  reportGroupCucumberJson:
+    files:
+      - target/cucumber.json
+    base-directory: $CODEBUILD_SRC_DIR_testes
+    discard-paths: yes
+    file-format: CucumberJson
+artifacts:
+  files:
+    - '**/*'
