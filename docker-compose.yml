@@ -4,7 +4,7 @@ services:
 
   produtos:
     container_name: produtos
-    image: tonanuvem/produtos-spring-data
+    image: tonanuvem/produtos
     ports:
      - "8080:8080"
      
