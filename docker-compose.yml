@@ -1,0 +1,50 @@
+
+version: '3'
+services:
+
+  produtos:
+    container_name: produtos
+    image: tonanuvem/produtos-spring-data
+    ports:
+     - "8080:8080"
+     
+  pagamento:
+    container_name: pagamento
+    image: tonanuvem/pagamento
+    ports:
+     - "8081:8080"
+  chat:
+    container_name: chat
+    image: tonanuvem/imagens-chat
+    ports:
+     - "8082:8080"
+     
+  clientes:
+    container_name: clientes
+    image: tonanuvem/clientes-microservice
+    ports:
+     - "5000:5000"
+
+  frontend_clientes_microservice:
+    container_name: frontend_clientes_microservice
+    image: tonanuvem/frontend_clientes_microservice
+    ports:
+     - "8000:80"
+
+  backend_clientes_microservice:
+    container_name: backend_clientes_microservice
+    image: tonanuvem/backend_clientes_microservice
+    ports:
+     - "5000:5000"
+
+  mongo:
+    container_name: mongo
+    image: mongo:latest
+    volumes:
+      - data:/data
+    restart: always
+    ports:
+      - "27017:27017"
+
+volumes:
+  data:
