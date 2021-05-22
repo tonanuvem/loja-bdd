@@ -26,14 +26,14 @@ services:
     ports:
      - "5001:5000"
 
-  frontend_clientes_microservice:
-    container_name: frontend_clientes_microservice
+  frontend:
+    container_name: frontend
     image: tonanuvem/frontend_clientes_microservice
     ports:
      - "8000:80"
 
-  backend_clientes_microservice:
-    container_name: backend_clientes_microservice
+  backend:
+    container_name: backend
     image: tonanuvem/backend_clientes_microservice
     ports:
      - "5000:5000"
