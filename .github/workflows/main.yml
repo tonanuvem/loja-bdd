@@ -39,10 +39,10 @@ jobs:
         uses: indiesdev/curl@v1
         id: api
         with:
-          url: https://reqres.in/api/users
+          url: https://localhost:8080/pagemento
           method: 'POST'
           accept: 201
-          body: '{ "name": "breeze",  "job": "devops" }'
+          body: '{ "tipo_pagamento": "CHEQUE",  "valor_pagamento": "400" }'
       - name: 'Use response'
         run: echo ${{ steps.api.outputs.response }}
 # # This is a basic workflow to help you get started with Actions
