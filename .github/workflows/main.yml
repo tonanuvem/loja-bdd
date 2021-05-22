@@ -18,8 +18,8 @@ jobs:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
-      - name: Test Cucumber
-        run: curl http://localhost:8080/
+      #- name: Test Cucumber
+        #run: curl http://localhost:8080/
         #run: curl http://localhost:8080/pagamento?tipo_pagamento="CHEQUE"&valor_pagamento="40"
         #run: mvn --batch-mode test
         #run: mvn --batch-mode --update-snapshots verify
@@ -28,6 +28,16 @@ jobs:
           access-token: ${{ secrets.GITHUB_TOKEN }}
           path: "**/cucumber-report.json"
 
+      - name: 'Call API'
+        uses: indiesdev/curl@v1
+        id: api
+        with:
+          url: https://reqres.in/api/users
+          method: 'POST'
+          accept: 201
+          body: '{ "name": "breeze",  "job": "devops" }'
+      - name: 'Use response'
+        run: echo ${{ steps.api.outputs.response }}
 # # This is a basic workflow to help you get started with Actions
 
 # name: CI com Testes integrados BDD usando contêineres
