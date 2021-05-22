@@ -1,51 +1,8 @@
-
 version: '3'
 services:
-
-  produtos:
-    container_name: produtos
-    image: tonanuvem/produtos
-    ports:
-     - "8080:8080"
-     
+ 
   pagamento:
     container_name: pagamento
     image: tonanuvem/pagamento
     ports:
-     - "8082:8080"
-     
-  chat:
-    container_name: chat
-    image: tonanuvem/imagens-chat
-    ports:
-     - "8081:8081"
-     
-  clientes:
-    container_name: clientes
-    image: tonanuvem/clientes-microservice
-    ports:
-     - "5001:5000"
-
-  frontend:
-    container_name: frontend
-    image: tonanuvem/frontend_clientes_microservice
-    ports:
-     - "8000:80"
-
-  backend:
-    container_name: backend
-    image: tonanuvem/backend_clientes_microservice
-    ports:
-     - "5000:5000"
-
-  mongo:
-    container_name: mongo
-    image: mongo:latest
-    volumes:
-      - data:/data
-    restart: always
-    ports:
-      - "27017:27017"
-
-volumes:
-  data:
+     - "8080:8080"
