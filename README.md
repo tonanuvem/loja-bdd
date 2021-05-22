@@ -10,6 +10,8 @@ Caso a solução esteja rodando em outra URL, deve-se ajustar a variável URL em
 
 Links:
 
+> https://docs.github.com/pt/actions/quickstart
+
 > https://github.com/peter-evans/smoke-testing
 
 > https://docs.github.com/pt/actions/reference/environment-variables
