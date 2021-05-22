@@ -39,7 +39,7 @@ jobs:
         uses: indiesdev/curl@v1
         id: api
         with:
-          url: https://localhost:8080/pagemento
+          url: https://localhost:8080/pagamento
           method: 'POST'
           accept: 201
           body: '{ "tipo_pagamento": "CHEQUE",  "valor_pagamento": "400" }'
